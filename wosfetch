@@ -1,0 +1,12 @@
+#!/usr/bin/python2
+#coding: utf-8
+import json,sys
+os = json.load(open("/var/run/nyx/os_info.json"))
+device = json.load(open("/var/run/nyx/device_info.json"))
+#Base Info
+print "\033[38;2;208;38;94mWebOS Codename: \033[38;2;255;255;255m" + os["core_os_name"]
+print "\033[38;2;208;38;94mWebOS Version: \033[38;2;255;255;255m" + os["core_os_release"]
+print "\033[38;2;208;38;94mKernel Version: \033[38;2;255;255;255m" + os["core_os_kernel_version"]
+print "\033[38;2;208;38;94mTV Product ID: \033[38;2;255;255;255m" + device["product_id"]
+print "\033[38;2;208;38;94mTotal Storage Space: \033[38;2;255;255;255m" + device["storage_size"]
+print "\033[38;2;208;38;94mUsable RAM Size: \033[38;2;255;255;255m" + device["ram_size"]
